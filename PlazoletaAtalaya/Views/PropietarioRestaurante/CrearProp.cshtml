@@ -1,0 +1,42 @@
+﻿@using PlazoletaAtalaya.Models
+@model PropietarioRestaurante
+
+@{
+}
+<br />
+
+<h3>Por favor ingrese los datos del usuario propietario que desea crear:</h3>
+
+<br />
+
+<form method="post" asp-controller="PropietarioRestaurante" asp-action="CrearProp">
+    <div class="mb-3">
+        <label for="cedulaPropietario" class="form-label">Cedula Propietario</label>
+        <input asp-for="Cedula" type="text" class="form-control" id="CedulaPropietario">
+    </div>
+    <div class="mb-3">
+        <label for="nombrePropietario" class="form-label">Nombre Propietario</label>
+        <input asp-for="Nombre" type="text" class="form-control" id="nombrePropietario">
+    </div>
+    <div class="mb-3">
+        <label for="edadPropietario" class="form-label">Edad Propietario</label>
+        <input asp-for="Edad" type="number" class="form-control" id="edadPropietario">
+    </div>
+    <div class="mb-3">
+        <label for="telefonoPropietario" class="form-label">Telefono Propietario</label>
+        <input asp-for="Telefono" type="text" class="form-control" id="telefonoPropietario">
+    </div>
+    <div class="mb-3">
+        <label for="correoPropietario" class="form-label">Correo Propietario</label>
+        <input asp-for="Correo" type="text" class="form-control" id="correoPropietario">
+    </div>
+    <div class="mb-3">
+        <label for="cargoPropietario" class="form-label">Cargo Propietario</label>
+        <input asp-for="Cargo" type="text" class="form-control" id="cargoPropietario">
+    </div>
+    <div class="mb-3">
+        <label for="nombreRestaurantePropietario" class="form-label">Nombre Restaurante Propietario</label>
+        <input asp-for="NombreRestaurante" type="text" class="form-control" id="nombreRestaurantePropietario">
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar Propietario</button>
+</form>

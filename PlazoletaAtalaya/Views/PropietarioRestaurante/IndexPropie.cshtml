@@ -1,0 +1,71 @@
+﻿@using PlazoletaAtalaya.Models
+@model List<PropietarioRestaurante>
+
+@{
+}
+
+<div>
+    <h2>Información propietarios restaurantes plazoleta Atalaya</h2>
+</div>
+
+<br />
+
+<p>Los propietarios de los restaurantes son los siguientes:</p> 
+
+<div>
+    @foreach(var propietarioRestaurante in Model)
+    {
+        <tr>
+        <li>@propietarioRestaurante.Nombre dueño(a) del restaurante @propietarioRestaurante.NombreRestaurante</li>
+        </tr>
+    }
+</div>
+
+<br />
+<br />
+
+<p>La informacion detallada de los propietarios es la siguiente:</p>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Cedula</th>
+                <th scope="col">Nombre Propietario</th>
+                <th scope="col">Edad</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Cargo</th>
+                <th scope="col">Nombre Restaurante</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var propietarioRestaurante in Model)
+            {
+                <tr>
+                    <td>@propietarioRestaurante.Cedula</td>
+                    <td>@propietarioRestaurante.Nombre</td>
+                    <td>@propietarioRestaurante.Edad</td>
+                    <td>@propietarioRestaurante.Telefono</td>
+                    <td>@propietarioRestaurante.Correo</td>
+                    <td>@propietarioRestaurante.Cargo</td>
+                    <td>@propietarioRestaurante.NombreRestaurante</td>
+
+                </tr>
+            }            
+        </tbody>
+    </table>
+
+<div />
+
+<p>Por favor seleccione la opcion que desea: </p>
+
+<button type="button" class="btn btn-primary btn-sm"><a class="nav-link text-dark" asp-area="" asp-controller="PropietarioRestaurante" asp-action="CrearProp">Crear propietario restaurante</a></button>
+
+<button type="button" class="btn btn-secondary btn-sm"><a class="nav-link text-dark" asp-area="" asp-controller="PropietarioRestaurante" asp-action="BorrarProp">Borrar propietario restaurante</a></button>
+
+<div />
+
+
+
+   

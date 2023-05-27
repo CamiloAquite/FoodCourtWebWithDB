@@ -1,0 +1,68 @@
+﻿@using PlazoletaAtalaya.Models
+@model List<AdministradorPlazoleta>
+
+@{
+}
+
+<div>
+    <h1>Información administradores plazoleta Atalaya</h1>
+</div>
+
+<br />
+
+<p>Los administradores son los siguientes:</p> 
+
+<div>
+
+    @foreach(var administradorPlazoleta in Model)
+    {
+        <tr>
+            <li>@administradorPlazoleta.Nombre administrador de la Plazoleta Atalaya</li>
+        </tr>
+    }
+
+</div>
+
+<br />
+<br />
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Cedula</th>
+                <th scope="col">Nombre Administrador</th>
+                <th scope="col">Edad</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Cargo</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var administradorPlazoleta in Model)
+            {
+                <tr>
+                    <td>@administradorPlazoleta.Cedula</td>
+                    <td>@administradorPlazoleta.Nombre</td>
+                    <td>@administradorPlazoleta.Edad</td>
+                    <td>@administradorPlazoleta.Telefono</td>
+                    <td>@administradorPlazoleta.Correo</td>
+                    <td>@administradorPlazoleta.Cargo</td>
+                </tr>
+
+            }
+
+        </tbody>
+    </table>
+</div>
+
+<div>
+
+<p>Por favor seleccione la opcion que desea: </p>
+
+    <button type="button" class="btn btn-primary btn-sm"><a class="nav-link text-dark" asp-area="" asp-controller="AdministradorPlazoleta" asp-action="CrearAdmin">Crear administrador plazoleta</a></button>
+
+    <button type="button" class="btn btn-secondary btn-sm"><a class="nav-link text-dark" asp-area="" asp-controller="AdministradorPlazoleta" asp-action="BorrarAdmin">Borrar administrador plazoleta</a></button>
+
+</div>
+

@@ -1,0 +1,14 @@
+﻿@using PlazoletaAtalaya.Models
+@model AdministradorPlazoleta
+
+@{
+   // Layout = "_Layout";
+}
+
+<form method="post" asp-controller="AdministradorPlazoleta" asp-action="BorrarAdmin">
+        <div class="mb-3">
+            <label for="cedulaAdministrador" class="form-label">Ingrese la cedula del usuario administrador que desea eliminar</label>
+            <input asp-for="Cedula" type="text" class="form-control" id="cedulaAdministrador">
+        </div>
+        <button type="submit" class="btn btn-primary">Confirmar cedula</button>
+    </form>

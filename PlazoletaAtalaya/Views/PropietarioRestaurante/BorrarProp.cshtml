@@ -1,0 +1,16 @@
+﻿@using PlazoletaAtalaya.Models
+@model PropietarioRestaurante
+
+@{
+}
+
+
+    <form method="post" asp-controller="PropietarioRestaurante" asp-action="BorrarProp">
+        <div class="mb-3">
+            <label for="cedulaPropietario" class="form-label">Ingrese la cedula del usuario que desea eliminar</label>
+            <input asp-for="Cedula" type="text" class="form-control" id="cedulaPropietario">
+        </div>
+        <button type="submit" class="btn btn-primary">Confirmar cedula</button>
+    </form>
+
+

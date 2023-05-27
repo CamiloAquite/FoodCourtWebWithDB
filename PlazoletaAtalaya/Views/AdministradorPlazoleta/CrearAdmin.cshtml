@@ -1,0 +1,41 @@
+﻿@using PlazoletaAtalaya.Models
+@model AdministradorPlazoleta
+
+@{
+   // Layout = "_Layout";
+    //int id,string nombre, int edad, string telefono, string correo, string cargo
+}
+
+<br />
+
+<h3>Por favor ingrese los datos del usuario administrador que desea crear:</h3>
+
+<br />
+
+<form method="post" asp-controller="AdministradorPlazoleta" asp-action="CrearAdmin">
+    <div class="mb-3">
+        <label for="CedulaAdministrador" class="form-label">Id Administrador</label>
+        <input asp-for="Cedula" type="text" class="form-control" id="CedulaAdministrador">
+    </div>
+    <div class="mb-3">
+        <label for="nombreAdministrador" class="form-label">Nombre administrador</label>
+        <input asp-for="Nombre" type="text" class="form-control" id="nombreAdministrador">
+    </div>
+    <div class="mb-3">
+        <label for="edadAdministrador" class="form-label">Edad Administrador</label>
+        <input asp-for="Edad" type="number" class="form-control" id="edadAdministrador">
+    </div>
+    <div class="mb-3">
+        <label for="telefonoAdministrador" class="form-label">Telefono Administrador</label>
+        <input asp-for="Telefono" type="text" class="form-control" id="telefonoAdministrador">
+    </div>
+    <div class="mb-3">
+        <label for="correoAdministrador" class="form-label">Correo Administrador</label>
+        <input asp-for="Correo" type="text" class="form-control" id="correoAdministrador">
+    </div>
+    <div class="mb-3">
+        <label for="cargoAdministrador" class="form-label">Cargo Administrador</label>
+        <input asp-for="Cargo" class="form-control" id="cargoAdministrador">
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar Administrador</button>
+</form>
